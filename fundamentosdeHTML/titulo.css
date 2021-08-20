@@ -1,5 +1,13 @@
-h1{
+.h2{
     display: none;
-    color: rgb(223, 34, 34);
+    color: rgb(94, 223, 34);
     text-align: center;
+}
+
+.city{
+    background-color: tomato;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
 }
