@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            table, th, td {
+            background-color: #f1f1c1;
+            border: 1px solid black;        /* Ancho del Borde */
+            border-collapse: collapse;        /* La tabla y las celdas con el mismo borde */
+            border-spacing: 15px;             /*  Espacio éntre las celdas */
+            }
+            th, td {
+            padding: 5px;                     /* Espacio entre la celda y el contenido */
+            text-align: left;    
+            }
+            </style>
+    </head>
+    <body>
+        <div>
+            <table style="width:50%">
+                <caption>Ejemplo de tablas #1</caption>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th> 
+                    <th>Edad</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div>
+            <table style="width:100%">
+                <caption>Ejemplo de tablas #2</caption>
+                <tr>
+                    <th>Name</th>
+                    <th colspan="2">Telephone</th>
+                </tr>
+                <tr>
+                    <td>Bill Gates</td>
+                    <td>55577854</td>
+                    <td>55577855</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <table style="width:100%">
+            <caption>Ejemplo de tablas #3</caption>
+            <tr>
+                <th>Name:</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Telephone:</th>
+                <td>55577854</td>
+            </tr>
+            <tr>
+                <td>55577855</td>
+            </tr>
+            <tr>
+                <td>55577855</td>
+            </tr>
+        </table>
+    </body>
+</html>
