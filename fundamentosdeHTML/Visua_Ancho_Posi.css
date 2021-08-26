@@ -1,0 +1,23 @@
+/* Propiedad Display */
+li {
+    display: inline;
+}
+
+p{
+    color: rgb(233, 26, 26);
+    display: none;
+}
+
+/* Propiedad width */
+
+div.ex1 {
+    width: 500px;
+    margin: auto;                /* margenes dentro de la pagina son las por defecto */
+    border: 3px solid #73AD21;
+}
+
+div.ex2 {
+    max-width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+}

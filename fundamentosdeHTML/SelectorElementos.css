@@ -1,0 +1,64 @@
+/*  selector de elementos CSS */
+
+/* El selector de elementos selecciona elementos HTML
+en función del nombre del elemento.
+
+Las etiquetas o elementos HTML que se encuentren en estos decoradores
+tendran las propiedasdes aquí descritas. */
+
+body {
+    background-color: powderblue;
+    /* propiedad          valor */
+            /*Declaración */
+}
+
+div{
+    background-color:brown;
+    width: 500px;
+    height: 400px;
+}
+
+div p {
+    text-align: center;
+    color:black;
+}
+
+p {
+    text-align: center;
+    color: red;
+}
+
+/*  El selector de id de CSS */
+/* El selector  id utiliza el atributo id de un elemento HTML 
+para seleccionar un elemento específico.
+
+La identificación de un elemento es única dentro de una página, 
+por lo que el selector de identificación se utiliza para seleccionar un elemento único.
+
+Para seleccionar un elemento con una identificación específica, 
+escriba un carácter de almohadilla (#), seguido de la identificación del elemento. 
+
+Un nombre de identificación no puede comenzar con un número*/
+
+#ejemplo1 {
+    text-align: center;
+    color: green;
+}
+
+/*  El selector de clases CSS */
+
+/* El selector de clases selecciona elementos HTML 
+con un atributo de clase específico.
+
+Para seleccionar elementos con una clase específica, escriba un punto (.), 
+Seguido del nombre de la clase. */
+
+.center {
+    text-align: center;
+    color: red;
+}
+
+h1.center {
+    text-align: center;
+    color:blueviolet;
+}
