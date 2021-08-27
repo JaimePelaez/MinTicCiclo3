@@ -20,7 +20,7 @@ div{
 
 div p {
     text-align: center;
-    color:black;
+    color:rgb(64, 133, 179);
 }
 
 p {
@@ -54,11 +54,16 @@ Para seleccionar elementos con una clase específica, escriba un punto (.),
 Seguido del nombre de la clase. */
 
 .center {
-    text-align: center;
+    text-align: right;
     color: red;
 }
 
-h1.center {
-    text-align: center;
+h1.center {                    /* Si hay un h1 con la atributo center hereda las propiedades de la clase y puede adicionar mas */ 
+    
     color:blueviolet;
+}
+
+.center > h1 {                   /* Si hay una etiqueta con atributo class y valor center;  */
+    color:blueviolet;           /* y contenga por dentro etiquetas h1 estas serán afectadas por las propiedades que disponga la etiqueta que la contenga pero no ereda estas mismas cualidades */   
+    
 }

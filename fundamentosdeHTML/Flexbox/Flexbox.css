@@ -1,0 +1,98 @@
+/* Con el selector universal Seleccionamos todas las etiquetas HTML*/
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* flex-Direction */
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuerpo1 {
+    display: flex;
+    flex-direction: row;
+}
+.cuerpo2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.cuerpo3 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* flex-wrap */
+.cuerpo4 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+}
+
+/* flex-content */
+.cuerpo5 {
+    display: flex;
+    justify-content: center;
+    background-color: DodgerBlue;
+}
+.cuerpo6 {
+    display: flex;
+    justify-content: flex-end;
+    background-color: DodgerBlue;
+}
+.cuerpo7 {
+    display: flex;
+    justify-content: space-around;
+    background-color: DodgerBlue;
+}
+.cuerpo8 {
+    display: flex;
+    justify-content: space-between;
+    background-color: DodgerBlue;
+}
+/* align-items */
+.cuerpo9 {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    background-color: DodgerBlue;
+}
+.cuerpo10 {                            /* por defecto  */
+    display: flex;
+    height: 200px;
+    align-items: stretch;
+    background-color: DodgerBlue;
+}
+.cuerpo11 {
+    display: flex;
+    height: 200px;
+    align-items: flex-start;
+    background-color: DodgerBlue;
+}
+.cuerpo12 {
+    display: flex;
+    height: 200px;
+    align-items: flex-end;
+    background-color: DodgerBlue;
+}
+.cuerpo13 {
+    display: flex;
+    height: 200px;
+    align-items: baseline;
+    background-color: DodgerBlue;
+}
+
+#cuadro{
+    background-color: #ac2424;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+
+
+
