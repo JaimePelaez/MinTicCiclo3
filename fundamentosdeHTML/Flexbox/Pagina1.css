@@ -1,0 +1,83 @@
+*{
+    margin: 5px;
+    padding: none;
+    border: 1px;
+    box-sizing: border-box;
+}
+
+    .padre{
+        display: flex;
+        flex-flow:column;
+        flex-wrap:  nowrap;
+    }
+
+        .header{
+            background-color:#22577A;
+            flex-flow: column;
+        }
+            .menu{
+                background-color: aqua;
+                display: flex;
+                flex-flow: row;
+                height: 60px;
+            }
+                .logo{
+                    background-color: #A3E041;
+                    flex: 1.5  1 auto;
+                }
+                .busqueda{
+                    background-color: #FC5949;
+                    flex: 5  1 auto;
+                }
+                    .search{
+                        background-color: #E0A441;
+                        height: 25px;
+                    }
+                    .navegacion{
+                        background-color: #6D5949;
+                        height: 8px; ;
+
+                    }
+        .section1{
+            background-color: #F6A9A9;
+            display: flex;
+            height: 150px;
+        }
+            .tool{
+                background-color: #E9E041;  
+                flex:1 1 auto;          
+            }
+            .imagenprincipal{
+                background-color: #5E6E49;
+                flex:5 1 auto;    
+            }
+
+        .section2{
+            background-color: #BAE041;
+            display: flex;
+            height: 200px;
+        }
+            .contenido{
+                background-color: #E33476;
+                display: flex;
+                flex-flow: row wrap;
+                flex:3 1 auto;  
+            }
+                .caracteristicas{
+                    background-color: #43db35;
+                    height: 20px;
+                    flex: 1 1 100% ;  
+                }
+                .productos{
+                    background-color: #e64ab2;
+                    height: 60px;
+                    flex:1 1 40% 
+                }
+        .footer{
+            background-color: #24ada2;
+        }
+
+        .aside{
+            background-color: #d19f15;
+            flex:1 1 auto; 
+        }
