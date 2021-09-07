@@ -1,87 +1,111 @@
-/* Con el selector universal Seleccionamos todas las etiquetas HTML*/
-*{
-    margin: 10px;
-    padding: 10px;
+/* Módulo de diseño CSS Flexbox.
+
+Antes del módulo Flexbox Layout, había cuatro modos de diseño:
+En bloque, para secciones de una página web
+En Inline, para texto
+En Tabla, para datos de tablas bidimensionales
+De Posicionado, para la posición explícita de un elemento
+
+
+El módulo de diseño de caja flexible facilita el diseño de una estructura de diseño flexible
+y receptiva sin usar float o posicionamiento. 
+Para comenzar a usar el modelo Flexbox, primero debe definir un contenedor flexible.
+ */
+
+
+
+
+
+*{ /* Con el selector universal Seleccionamos todas las etiquetas HTML*/
+    margin: 5px;
+    padding: 5px;           
     box-sizing: border-box;
 }
 
-/* flex-Direction */
-.cuerpo {
-    display: flex;
+
+
+/* flex-Direction. La propiedad flex-direction define en qué dirección el contenedor 
+quiere apilar los elementos flexibles.*/
+.cuerpo {   
+    background-color: #e0b5b5;
+    display: flex;                    /* Especifica contenedor flexible */
     flex-direction: column;
 }
 
 .cuerpo1 {
+    background-color: #e0b5b5;
     display: flex;
     flex-direction: row;
 }
 .cuerpo2 {
+    background-color: #e0b5b5;
     display: flex;
     flex-direction: row-reverse;
 }
 .cuerpo3 {
+    background-color: #e0b5b5;
     display: flex;
     flex-direction: column-reverse;
 }
 
-/* flex-wrap */
+/* flex-wrap. La propiedad flex-wrap especifica si los elementos flexibles deben ajustarse o no.*/
 .cuerpo4 {
     display: flex;
     flex-wrap: wrap;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 
-/* flex-content */
+/* justify-content.  La propiedad justify-content se usa para alinear los elementos flexibles:*/
 .cuerpo5 {
     display: flex;
     justify-content: center;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 .cuerpo6 {
     display: flex;
     justify-content: flex-end;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 .cuerpo7 {
     display: flex;
     justify-content: space-around;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 .cuerpo8 {
     display: flex;
     justify-content: space-between;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
-/* align-items */
+/* align-items. La propiedad align-items se usa para alinear los elementos flexibles.*/
 .cuerpo9 {
     display: flex;
     height: 200px;
     align-items: center;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 .cuerpo10 {                            /* por defecto  */
     display: flex;
     height: 200px;
     align-items: stretch;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 .cuerpo11 {
     display: flex;
     height: 200px;
     align-items: flex-start;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 .cuerpo12 {
     display: flex;
     height: 200px;
     align-items: flex-end;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 .cuerpo13 {
     display: flex;
     height: 200px;
     align-items: baseline;
-    background-color: DodgerBlue;
+    background-color: rgb(150, 191, 233);
 }
 
 #cuadro{

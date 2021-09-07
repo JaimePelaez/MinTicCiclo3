@@ -9,10 +9,15 @@
 <body>
 
     <h2>Una lista Desordenada</h2>
-    <ul style="list-style-type: square;">
 
-        <!-- Defecto. Abre el documento en la misma ventana / pestaña en la que se hizo clic -->
-        <li><a href="https://www.flaticon.es/" target="_self">ICONOS</a></li>
+    <ul style="list-style-type:disc">
+
+        <!-- ATRIBUTO TARGET: El atributo target indica al navegador dónde abrir la página o documento enlazado.
+        El uso habitual de este atributo es diferenciar los enlaces internos de los externos, 
+        siendo estos últimos los que suelen abrirse en otra pestaña. -->
+
+        <!-- es el valor por defecto. Abre el documento en la misma ventana / pestaña en la que se hizo clic -->
+        <li> <a href="https://www.flaticon.es/" target="_self">ICONOS</a> </li>
 
         <!-- Abre el documento en una nueva ventana o pestaña -->
         <li><a href="Css_6.html" target="_blank">CSS</a></li>
@@ -20,27 +25,40 @@
         <!-- Abre el documento en el marco principal. -->
         <li><a href="Formato_5.html" target="_parent">FORMATO</a></li>
 
-        <!-- Abre el documento en el marco principal. -->
+        <!-- Abre el documento en todo el cuerpo de la ventana. -->
         <li>
             <a href="Estilos_4.html" target="_top">
-                <img src="nota.png" alt="algo para explicar" style="width:42px;height:42px;">
+                <img href="C:\Users\Jaime Pelaez\Desktop" src="FOTO1.jpg" alt="algo para explicar" style="width:42px;height:42px;">
             </a>
         </li>
     </ul> 
 
+
+    <!-- La propiedad de CSS list-style-type se utiliza para definir 
+    el estilo del marcador de elementos de la lista.
+    disc, circle, square, none -->
+
     <h2>Una lista ordenada</h2>
-    <ol>
+    <ol style="list-style-type:lower-greek">
         <li>Coffee</li>
         <li>Tea</li>
         <li>Milk</li>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li> 
     </ol>
     
+
+
     <!-- lista descriptiva -->
-    <dl >
+    
+    <dl>
         <dt>Coffee</dt>
         <dd>- black hot drink</dd>
         <dt>Milk</dt>
         <dd>- white cold drink</dd>
     </dl>
+
+    
 </body>
 </html>

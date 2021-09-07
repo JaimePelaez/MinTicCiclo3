@@ -15,6 +15,8 @@
     <button type="button" onclick='document.getElementById("delta").innerHTML = "Y cada vez que me dan Click cambio mensaje"'>Click Me!</button>
     <!-- javaScript acepta comillas simples y dobles -->
 
+    <hr>
+
     <!-- javaScript cambia cambia los valores de los atributos HTML -->
     <h2 style="color: rgb(175, 102, 7);">javaScript cambia cambia los valores de los atributos HTML</h2>
     <p>En este caso, JavaScript cambia el valor del atributo src (fuente) de una imagen..</p>
@@ -22,13 +24,15 @@
     <img id="myImage" src="Antes.JPG" style="width:400px">
     <button onclick="document.getElementById('myImage').src='Despues.JPG'">Despues</button>
     
-    
+    <hr>
+
     <!-- javaScript cambia cambia los estilos HTML (CSS) -->
     <h2 style="color: rgb(175, 102, 7);">javaScript cambia cambia los estilos HTML (CSS)</h2>
     <p id="demo">JavaScript puede cambiar los estilos de un elemento HTML.</p>
     <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
 
-    
+    <hr>
+
     <!-- javaScript puede ocultar y mostrar elementos -->
     <h2 style="color: rgb(175, 102, 7);">javaScript puede ocultar y mostrar elementos HTML </h2>
     <p id="cambio">JavaScript can hide HTML elements.</p>
@@ -37,8 +41,10 @@
     <br>
     <button type="button" onclick="document.getElementById('cambio').style.display='block'">Aparecer</button>
 
+    <hr>
+    <h1 style="color: brown;">¿Como implementar los script?</h1>
     <!-- Funciones y eventos de JavaScript
-    Un JavaScript functiones un bloque de código JavaScript, que se puede ejecutar cuando se "solicita".
+    En JavaScript las funcionesson  un bloque de código JavaScript, que se puede ejecutar cuando se "solicita".
     Por ejemplo, se puede llamar a una función cuando ocurre un evento , como cuando el usuario hace clic en un botón. -->
 
     
@@ -53,18 +59,78 @@
         }
     </script>
 
+    <hr>
 
     <!-- Los scripts también se pueden colocar en archivos externos,
-    En donde los scripts externos son prácticos cuando se usa el mismo código
+    los scripts externos son prácticos cuando se usa el mismo código
     en muchas páginas web diferentes.
-    Para utilizar una secuencia de comandos externa, coloque el nombre del archivo
-    de secuencia de comandos en el src atributo (fuente) de una <script> etiqueta: -->
 
-    <h2 style="color: rgb(175, 102, 7);">Demo External JavaScript</h2>
+    Colocar scripts en archivos externos tiene algunas ventajas como Separa el HTML y código, 
+    Hace que HTML y JavaScript sean más fáciles de leer y mantener,Los archivos JavaScript 
+    almacenados en caché pueden acelerar la carga de la página; y para utilizar una secuencia 
+    de comandos externa, coloque el nombre del archivo en el src atributo (fuente) de una <script> etiqueta: -->
+
+
+    <h2 style="color: rgb(175, 102, 7);">Demostración de java script externo</h2>
     <p id="cambio2">Este es un parrafo.</p>
     <button type="button" onclick="myFunction()">Try it</button>
     <script src="javascript.js"></script>
     <!-- myFunction se almacena en "javascript.js"     -->
+
+    <hr>
+    <h1 style="color: brown;">Posibilidades de visualización de JavaScript</h1>
+    
+    <!-- JavaScript puede "mostrar" datos de diferentes formas:
+        Escribiendo en un elemento HTML, usando innerHTML.
+        Escribir en la salida HTML usando document.write().
+        Escribiendo en un cuadro de alerta, usando window.alert().
+        Escribiendo en la consola del navegador, usando console.log().   -->
+
+    <h2 style="color: rgb(175, 102, 7);">Usando innerHTML</h2>
+    <p id="ejemplo"></p>
+    <script>
+        document.getElementById("ejemplo").innerHTML=   'la resta es '  + 5+6  ;  
+    </script>
+    <!-- Para acceder a un elemento HTML, JavaScript puede usar el document.getElementById(id) método.
+    El id atributo define el elemento HTML. La innerHTML propiedad define el contenido HTML: -->
+
+    <hr>
+
+    <!-- Para fines de prueba, es conveniente utilizar document.write(): -->
+    <h2 style="color: rgb(175, 102, 7);">Usando document.write()</h2>
+    <p>My first paragraph.</p>
+    <button type="button" onclick="document.write(5 + 6)">Try it</button>    
+    <!-- El uso de document.write () después de cargar un documento HTML, 
+    eliminará todo el HTML existente : -->
+
+    <hr>
+
+    <!-- Puede utilizar un cuadro de alerta para mostrar datos: -->
+    <h2 style="color: rgb(175, 102, 7);">Usando window.alert ()</h2>
+    <!-- <script>
+        window.alert(5 + 6);
+    </script> -->
+
+    <hr>
+
+    <!-- Programas JavaScript
+    Un programa de computadora es una lista de "instrucciones" que una computadora debe "ejecutar".
+    En un lenguaje de programación, estas instrucciones de programación se denominan sentencias .
+    Un programa JavaScript es una lista de declaraciones de programación .
+    En HTML, los programas JavaScript son ejecutados por el navegador web. -->
+
+    <!-- Para una mejor legibilidad, a los programadores a menudo les gusta evitar
+    las líneas de código de más de 80 caracteres; si una declaración de JavaScript
+    no cabe en una línea, el mejor lugar para romperla es después de un operador: -->
+
+    <h2 style="color: rgb(175, 102, 7);"> Declaraciones java script </h2>
+    <p id="ejemplo1"></p>
+    <script>
+    document.getElementById("ejemplo1").innerHTML =
+    "Hello Muchachos!";
+    </script>
+
+
 
 </body>
 </html>

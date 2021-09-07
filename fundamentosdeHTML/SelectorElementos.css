@@ -1,13 +1,13 @@
 /*  selector de elementos CSS */
 
-/* El selector de elementos selecciona elementos HTML
+/* El selector de elementos. selecciona elementos HTML
 en función del nombre del elemento.
 
 Las etiquetas o elementos HTML que se encuentren en estos decoradores
 tendran las propiedasdes aquí descritas. */
 
 body {
-    background-color: powderblue;
+    background-color: rgb(99, 255, 71);
     /* propiedad          valor */
             /*Declaración */
 }
@@ -38,6 +38,11 @@ por lo que el selector de identificación se utiliza para seleccionar un element
 Para seleccionar un elemento con una identificación específica, 
 escriba un carácter de almohadilla (#), seguido de la identificación del elemento. 
 
+no se recomienda para dar estilos, se utilizan más para diferenciar
+componentes y ser utilizados en HTML para las anclas (referencias a diferentes
+partes del mismo documento) y en JS para identificar específicamente un elemento
+en el DOM, recalcando que no se debe usar para estilos
+
 Un nombre de identificación no puede comenzar con un número*/
 
 #ejemplo1 {
@@ -58,12 +63,11 @@ Seguido del nombre de la clase. */
     color: red;
 }
 
-h1.center {                    /* Si hay un h1 con la atributo center hereda las propiedades de la clase y puede adicionar mas */ 
+
+.center > h1 {                  
+    color:blueviolet;           
     
-    color:blueviolet;
 }
 
-.center > h1 {                   /* Si hay una etiqueta con atributo class y valor center;  */
-    color:blueviolet;           /* y contenga por dentro etiquetas h1 estas serán afectadas por las propiedades que disponga la etiqueta que la contenga pero no ereda estas mismas cualidades */   
-    
-}
+/* para mas información 
+https://www.yunbitsoftware.com/blog/2017/12/14/selectores-y-pseudo-clases-css/ */
