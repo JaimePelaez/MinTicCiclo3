@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pagina3.css">
+    <title>Document</title>
+    <style>
+
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: rgb(4, 0, 255);
+            height: 100%;
+        }
+        
+        li {
+            float: left; 
+        }
+        
+        li a {
+            display: inline;         /* Explicación en el cuaderno */
+            color: white;
+            text-align: center;
+            padding: 5px;
+            text-decoration:double;
+        }
+        
+        /* ¿Qué son las pseudoclases?
+        Una pseudoclase se usa para definir un estado especial de un elemento.
+        Por ejemplo, se puede utilizar para:
+        Aplicar estilo a un elemento cuando un usuario pasa el mouse sobre él
+        Estilo de enlaces visitados y no visitados de manera diferente
+        Aplicar estilo a un elemento cuando se enfoca */
+        li a:hover {                               
+            background-color: #a10a0a; 
+        }
+        </style>
+</head>
+<body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <section class="logo"></section>
+                <section class="busqueda">
+                    <div class="search">
+                        <ul>
+                            <li><a href="https://www.flaticon.es/">Home</a></li>
+                            <li><a href="Css_6.html">News</a></li>
+                            <li><a href="Formato_5.html">Contact</a></li>
+                            <li><a href="Estilos_4.html">About</a></li>
+                        </ul>
+                    </div>
+                    <nav class="navegacion"></nav>
+                </section>
+            </div>
+        </header>
+        <section class="section1">
+            <div class="tool"></div>
+            <div class="imagen">
+                <p>
+                </p>
+            </div>
+        </section>
+        <section class="section2">
+            <div class="contenido">
+                <nav class="caracteristicas"></nav>
+                <div class="productos"></div>
+                <div class="productos"></div>
+                <div class="productos"></div>
+                <div class="productos"></div>
+            </div>
+            <aside class="aside"></aside>
+        </section>
+        <footer class="footer">
+            <div class="informacion"></div>
+        </footer>
+        
+    </div>
+</body>
+</html>

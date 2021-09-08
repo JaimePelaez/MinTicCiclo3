@@ -1,0 +1,89 @@
+*{
+    margin: 5px;
+    padding: none;
+    border: 1px;
+    box-sizing: border-box;
+}
+
+    .padre{
+        display: flex;
+        flex-flow: column;
+        flex-wrap: nowrap;
+    }
+
+        .header{
+            background-color: aqua;
+            flex-flow: column, nowrap;
+        }
+            .menu{
+                background-color: rgb(0, 255, 64);
+                display: flex;
+                flex-flow: row, nowrap;
+                height: 80px;
+            }
+                .logo{
+                    background-color: rgb(255, 94, 0);
+                    flex: 1 1 auto;
+                }
+                .busqueda{
+                    background-color: rgb(4, 0, 255);
+                    flex: 5 1 auto;
+                }
+                    .search{
+                        display: flex;
+                        flex-direction: row-reverse;
+                        background-color: rgb(4, 0, 255);
+                        height: 30px;
+                    }
+                    .navegacion{
+                        position: relative;
+                        top: 15px;
+                        background-color: rgb(255, 0, 242);
+                        height: 10px;
+                    }
+
+        .section1{
+            background-color: tomato;
+            display: flex;
+            height: 300px;
+        }
+            .tool{
+                background-color: rgb(212, 255, 71);
+                flex: 1.5 1 auto;
+            }
+            .imagen{
+                position: static;
+                background-color: rgb(71, 218, 255);
+                flex: 5 1 auto;
+            }
+        
+        .section2{
+            background-color: yellowgreen;
+            display: flex;
+            height: 350px;
+        }
+            .contenido{
+                background-color: rgb(3, 121, 56);
+                display: flex;
+                flex-flow: row wrap;
+                flex: 3 1 auto;
+            }
+                .caracteristicas{
+                    background-color: rgb(121, 3, 3);
+                    height: 20px;
+                    flex: 1 1 100%;
+                }
+                .productos{
+                    background-color: rgb(121, 3, 92);
+                    height: 120px;
+                    flex: 1 1 40%;
+                }
+            .aside{
+                background-color: rgb(3, 25, 121);
+                flex: 1 1 auto;
+            }
+
+        .footer{
+            background-color: gray;
+            height: 80px;
+        }
