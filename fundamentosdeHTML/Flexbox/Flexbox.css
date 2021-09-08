@@ -58,7 +58,7 @@ quiere apilar los elementos flexibles.*/
 /* justify-content.  La propiedad justify-content se usa para alinear los elementos flexibles:*/
 .cuerpo5 {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     background-color: rgb(150, 191, 233);
 }
 .cuerpo6 {
@@ -80,7 +80,7 @@ quiere apilar los elementos flexibles.*/
 .cuerpo9 {
     display: flex;
     height: 200px;
-    /* align-items: center; */
+    align-items: center;
     background-color: rgb(150, 191, 233);
 }
 .cuerpo10 {                            /* por defecto  */
