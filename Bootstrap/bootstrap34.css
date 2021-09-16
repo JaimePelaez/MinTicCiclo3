@@ -1,0 +1,50 @@
+.component{
+    height: 8rem;
+    background-color: black;
+    border-radius: 0.25rem;
+}
+
+@media (min-width: 576px){
+    .component{
+        background-color: red;
+    }
+}
+@media (min-width: 768px){
+    .component{
+        height: 8rem;
+        background-color: green;
+        border-radius: 0.25rem;
+    }
+}
+@media (min-width: 992px){
+    .component{
+        height: 8rem;
+        background-color: yellow;
+        border-radius: 0.25rem;
+    }
+}
+@media (min-width: 1200px){
+    .component{
+        height: 8rem;
+        background-color: blue;
+        border-radius: 0.25rem;
+    }
+}
+@media (min-width: 1400px){
+    .component{
+        height: 8rem;
+        background-color: gray;
+        border-radius: 0.25rem;
+    }
+}
+
+.alto{
+    height: 400px;
+    background-color: peru;
+}
+
+.jaime{
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF8235, #30E8BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

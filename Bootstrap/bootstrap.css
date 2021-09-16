@@ -1,0 +1,46 @@
+.componet{
+    height: 8rem;
+    background-color: black;
+    border-radius: .25rem;
+}
+
+@media (min-width:576px){
+    .componet{
+        height: 8rem;
+        background-color: red;
+        border-radius: .25rem;
+    }
+}
+@media (min-width:768px){
+    .componet{
+        height: 8rem;
+        background-color: green;
+        border-radius: .25rem;
+    }
+}
+@media (min-width:992px){
+    .componet{
+        height: 8rem;
+        background-color: yellow;
+        border-radius: .25rem;
+    }
+}
+@media (min-width: 1200px){
+    .componet{
+        height: 8rem;
+        background-color: violet;
+        border-radius: .25rem;
+    }
+}
+@media (min-width:1400px){
+    .componet{
+        height: 8rem;
+        background-color: aqua;
+        border-radius: .25rem;
+    }
+}
+.jaime{
+    background: #4ECDC4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

@@ -1,0 +1,44 @@
+.component{
+    height: 8rem;
+    background-color: black;
+    border-radius: 0.25rem;
+}
+
+@media (min-width:700px){
+    .component{
+        height: 8rem;
+        background-color: red;
+        border-radius: 0.25rem;
+    }
+}
+@media (min-width:900px){
+    .component{
+        height: 8rem;
+        background-color: yellow;
+        border-radius: 0.25rem;
+    }
+}
+@media (min-width:1000px){
+    .component{
+        height: 8rem;
+        background-color: blue;
+        border-radius: 0.25rem;
+    }
+}
+@media (min-width:1300px){
+    .component{
+        height: 8rem;
+        background-color: green;
+        border-radius: 0.25rem;
+    }
+}
+@media (min-width:1400px){
+    .component{
+        height: 8rem;
+        background-color: gray;
+        border-radius: 0.25rem;
+    }
+}
+.jaime{
+   background-color: rgb(85, 85, 126);
+}

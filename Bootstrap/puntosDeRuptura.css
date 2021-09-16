@@ -1,3 +1,5 @@
+
+
 .component{
     height: 8rem;
     background-color: black;
@@ -38,4 +40,11 @@
         background-color: yellow;
         border-radius: .25rem;
     }
+}
+
+/* -------------------------------------------------- */
+
+.alto{
+    height: 400px;
+    background-color: peru;
 }
