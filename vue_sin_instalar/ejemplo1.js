@@ -3,25 +3,38 @@
 Vue.component('saludo',{
     template:'<h1>Hola Muchachos</h1>',
 });
+
+
+
+
 Vue.component('saludo1',{
-    template:'<h1>{{saludo}}</h1>',
+    template:'<h1>{{saludo2}}</h1>',
     data(){
         return{
-            saludo:'Como estan muchachos'
+            saludo:'Como estan muchachos',
+            saludo2:'Muy bien'
         }
     }
 });
+
 Vue.component('saludo2',{
     template://html 
-    `
+    ` 
     <div>
-        <h1>{{saludo}}</h1>
-        <h3> porque yo me encuentro bien</h3>
+        <ul>
+            <li><a href="https://www.flaticon.es/">{{saludo}}</a></li>
+            <li><a href="Css_6.html">{{saludo1}}</a></li>
+            <li><a href="Formato_5.html">{{saludo2}}</a></li>
+            <li><a href="Estilos_4.html">{{saludo3}}</a></li>
+        </ul>
     </div>
     `,
     data(){
         return{
-            saludo:'Espero que bien'
+            saludo:'Home',
+            saludo1:'News',
+            saludo2:'Contact',
+            saludo3:'About'
         }
     }
     
@@ -59,7 +72,7 @@ Vue.component('contador',{
     
 }); */
 
-Vue.component('padre',{
+/* Vue.component('padre',{
     template://html 
     `
     <div class="p-5 bg-primary text-white">
@@ -74,7 +87,7 @@ Vue.component('padre',{
         }
     }
     
-});
+}); */
 
 /* Vue.component('hijo',{
     template://html 
@@ -86,7 +99,7 @@ Vue.component('padre',{
     
 }); */
 
-Vue.component('hijo',{
+/* Vue.component('hijo',{
     template://html 
     `
     <div class="p-5 bg-dark">
@@ -95,6 +108,48 @@ Vue.component('hijo',{
     `,
     props:['numero']
     
+}); */
+
+// COMUNICACION ENTRE EL HIJO AL PADRE
+
+Vue.component('padre',{
+    template://html 
+    `
+    <div class="p-5 bg-primary text-white">
+        <h2>Componente padre {{numeropadre}}</h2>
+        <button class="bnt btn-danger" @click="numeropadre++">+</button>
+        {{nombrepadre}}
+        <hijo :numero="numeropadre" @nombrehijo="nombrepadre = $event"></hijo>
+    </div>
+    `,
+    data(){
+        return{
+            numeropadre:0,
+            nombrepadre:''
+        }
+    }
+    
+});
+
+Vue.component('hijo',{
+    template://html 
+    `
+    <div class="p-5 bg-dark">
+        <h4>Componente hijo  {{numero}}</h4>
+        <h4>nombre: {{nombre}}</h4>
+        <button @click="numero++">+</button>
+    </div>
+    `,
+    props:['numero'],
+    data(){
+        return{
+            nombre:'Jaime'
+        }
+    },
+
+    mounted() {
+        this.$emit('nombrehijo', this.nombre);
+    },
 });
 
 const app = new Vue({

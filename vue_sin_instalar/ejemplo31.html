@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <ul>
+            <li v-for="Equipo of Equipos">
+                {{Equipo.nombre}}-{{Equipo.titulos}}
+                <p v-if="Equipo.titulos==0" style="display: inline; margin-left: 50px;">Este pais no tiene copas mundiales</p>
+                <p v-else  style="display: inline; margin-left: 50px;"> Estos paises si tiene copas mundiales</p>
+            </li>
+        </ul>
+        <hr>
+        <!-- ----------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------- -->
+
+        <p>Suma:</p>
+        <p>{{x}} + {{y}} = {{x+y}}</p>
+        <p>Resta:</p>
+        <p>{{x}} - {{y}} = {{x-y}}</p>
+        <p>Multiplicación:</p>
+        <p>{{x}} x {{y}} = {{x*y}}</p>
+        <p>División:</p>
+        <p>{{x}} % {{y}} = {{x/y}}</p>
+
+        <hr>
+        <!-- ---------------------------------------------------------------------------------- -->
+        <input type="text" v-model="nuevoEquipo" v-on:keyup.enter="agregarEquipo">
+        <button v-on:click="agregarEquipo">Agregar Equipo</button>
+        <!-- opción uno de escritura de eventos -->
+        <hr>
+        <!-- ------------------------------------------------------------------------------------- -->
+        <input type="text" v-model="nuevoEquipo" @keyup.enter="agregarEquipo">
+        <button @click="agregarEquipo">Agregar Equipo</button>
+        <!-- opción dos de escritura de eventos -->
+        <br><br>
+        <ul>
+            <li v-for="Equipo of Equipos">
+                <button @click="Equipo.titulos++">+</button>
+                {{Equipo.nombre}}-{{Equipo.titulos}}
+                <input type="number" v-model.number="Equipo.titulos" style="width: 30px;position: relative; left: 30px;" >
+                <!-- a la directiva v-model se le pone el number -->
+                <br><br>
+            </li>
+        </ul>
+        <h4>Total de copas ganadas: {{sumarCopas}}</h4>
+    </div>
+    
+    
+    <script src="ejemplo31.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
