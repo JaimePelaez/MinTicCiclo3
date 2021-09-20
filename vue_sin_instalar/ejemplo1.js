@@ -21,12 +21,29 @@ Vue.component('saludo2',{
     template://html 
     ` 
     <div>
-        <ul>
-            <li><a href="https://www.flaticon.es/">{{saludo}}</a></li>
-            <li><a href="Css_6.html">{{saludo1}}</a></li>
-            <li><a href="Formato_5.html">{{saludo2}}</a></li>
-            <li><a href="Estilos_4.html">{{saludo3}}</a></li>
-        </ul>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+        </div>
     </div>
     `,
     data(){
@@ -61,7 +78,7 @@ Vue.component('contador',{
     `
     <div class="p-5 bg-primary text-white">
         <h2>Componente padre</h2>
-        <hijo numero="5"></hijo>
+        <hijo></hijo>
     </div>
     `,
     data(){
@@ -70,26 +87,8 @@ Vue.component('contador',{
         }
     }
     
-}); */
-
-/* Vue.component('padre',{
-    template://html 
-    `
-    <div class="p-5 bg-primary text-white">
-        <h2>Componente padre {{numeropadre}}</h2>
-        <button class="bnt btn-danger" @click="numeropadre++">+</button>
-        <hijo :numero="numeropadre"></hijo>
-    </div>
-    `,
-    data(){
-        return{
-            numeropadre:0
-        }
-    }
-    
-}); */
-
-/* Vue.component('hijo',{
+}); 
+Vue.component('hijo',{
     template://html 
     `
     <div class="p-5 bg-dark">
@@ -99,16 +98,36 @@ Vue.component('contador',{
     
 }); */
 
-/* Vue.component('hijo',{
+/* Vue.component('padre',{
+    template://html 
+    `
+    <div class="p-5 bg-primary text-white">
+        <h2>Componente padre {{numeropadre}}</h2>
+        <button class="bnt btn-danger" @click="numeropadre++">+</button>
+        <hijo :esto ="numeropadre" :esto1 ="numeropadre"></hijo>
+    </div>
+    `,
+    data(){
+        return{
+            numeropadre:0
+        }
+    }
+    
+}); 
+
+
+
+Vue.component('hijo',{
     template://html 
     `
     <div class="p-5 bg-dark">
-        <h4>Componente hijo  {{numero}}</h4>
+        <h4>Componente hijo  {{esto}} + {{esto1}}</h4>
     </div>
     `,
-    props:['numero']
+
+    props:['esto','esto1']
     
-}); */
+});  */
 
 // COMUNICACION ENTRE EL HIJO AL PADRE
 
@@ -118,7 +137,8 @@ Vue.component('padre',{
     <div class="p-5 bg-primary text-white">
         <h2>Componente padre {{numeropadre}}</h2>
         <button class="bnt btn-danger" @click="numeropadre++">+</button>
-        {{nombrepadre}}
+        <h4>{{nombrepadre}}
+        </h4>
         <hijo :numero="numeropadre" @nombrehijo="nombrepadre = $event"></hijo>
     </div>
     `,
@@ -143,7 +163,7 @@ Vue.component('hijo',{
     props:['numero'],
     data(){
         return{
-            nombre:'Jaime'
+            nombre:'Felipe'
         }
     },
 
@@ -152,6 +172,8 @@ Vue.component('hijo',{
     },
 });
 
+
+//INSTANCIA
 const app = new Vue({
     el: '#app',
     data:{
