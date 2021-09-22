@@ -9,6 +9,7 @@ Vue.component('saludo',{
 
 Vue.component('saludo1',{
     template:'<h1>{{saludo2}}</h1>',
+    
     data(){
         return{
             saludo:'Como estan muchachos',
@@ -17,7 +18,7 @@ Vue.component('saludo1',{
     }
 });
 
-Vue.component('saludo2',{
+Vue.component("saludo2",{
     template://html 
     ` 
     <div>
@@ -104,9 +105,11 @@ Vue.component('hijo',{
     <div class="p-5 bg-primary text-white">
         <h2>Componente padre {{numeropadre}}</h2>
         <button class="bnt btn-danger" @click="numeropadre++">+</button>
-        <hijo :esto ="numeropadre" :esto1 ="numeropadre"></hijo>
+        <input type="text" >
+        <hijo :numero ="numeropadre" :esto1 ="numeropadre"></hijo>
     </div>
     `,
+    
     data(){
         return{
             numeropadre:0
@@ -121,13 +124,12 @@ Vue.component('hijo',{
     template://html 
     `
     <div class="p-5 bg-dark">
-        <h4>Componente hijo  {{esto}} + {{esto1}}</h4>
+        <h4>Componente hijo  {{numero}} + {{esto1}}</h4>
     </div>
     `,
-
-    props:['esto','esto1']
+    props:['numero','esto1']
     
-});  */
+}); */
 
 // COMUNICACION ENTRE EL HIJO AL PADRE
 
@@ -137,8 +139,7 @@ Vue.component('padre',{
     <div class="p-5 bg-primary text-white">
         <h2>Componente padre {{numeropadre}}</h2>
         <button class="bnt btn-danger" @click="numeropadre++">+</button>
-        <h4>{{nombrepadre}}
-        </h4>
+        <h4>{{nombrepadre}}</h4>
         <hijo :numero="numeropadre" @nombrehijo="nombrepadre = $event"></hijo>
     </div>
     `,
@@ -161,6 +162,7 @@ Vue.component('hijo',{
     </div>
     `,
     props:['numero'],
+
     data(){
         return{
             nombre:'Felipe'
@@ -174,6 +176,8 @@ Vue.component('hijo',{
 
 
 //INSTANCIA
+
+
 const app = new Vue({
     el: '#app',
     data:{

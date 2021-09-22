@@ -1,12 +1,12 @@
-/* Vue.component('titulo',{
+/*Vue.component('titulo',{
     template://html
             `<div>
-                <h1>{{titulo}}:{{$store.state.numero}}</h1>
+                <h1>{{titulo}}{{$store.state.numero}}</h1>
                 <boton></boton>
             </div>`,
     data(){
         return{
-            titulo:'Los numeros son',
+            titulo:'Los numeros son: ',
             
         }
     }
@@ -14,46 +14,33 @@
 
 
 
-/* Vue.component('boton',{
+Vue.component('boton',{
     template://html
             `<div>
                 <button @click="$store.commit('incrementar')">+</button>
                 <h4>{{$store.state.numero}}</h4>
             </div>`,
-    data(){
-        return{
-            titulo:'Los numeros son',
-            
-        }
-    }
 }); */
 
- Vue.component('titulo',{
+Vue.component('titulo',{
     template://html
             `<div>
-                <h1>{{titulo}}:{{numero}}+{{numero1}}</h1>
+                <h1>{{titulo}}: {{numero}}</h1>
                 <boton></boton>
             </div>`,
     data(){
         return{
             titulo:'Los numeros son',
-            
         }
     },
     computed:{
-        /*  numero(){
-            return store.state.numero
-        },
-        numero1(){
-            return store.state.numero1
-        }  */
-        ...Vuex.mapState(['numero','numero1'])
+        ...Vuex.mapState(['numero','numero1']),
     }
-});
+}); 
 
 
-
-/* Vue.component('boton',{
+/*
+Vue.component('boton',{
     template://html
             `<div>
                 <button @click="incrementar">+</button>
@@ -65,17 +52,17 @@
     methods: {
         ...Vuex.mapMutations(['incrementar'])
     },
-});   */
+});   */ 
 
 
-
+ 
 Vue.component('boton',{
     template://html
             `<div>
                 <button @click="incrementar">+</button>
                 <button @click="obtenerMaterias">Mostrar Materias</button>
-                <ul v-for="materia of materias">
-                    <li>{{materia.nombre}}</li>
+                <ul>
+                    <li v-for="materia of materias">{{materia.nombre}}</li>
                 </ul>
             </div>`,
     computed:{
@@ -89,12 +76,12 @@ Vue.component('boton',{
 
 /* UNA NUEVA INSTANCIA DE VUEX
 va hacer un objeto con toda la configuración de vuex o una instancia, que tambien 
-que debemos llamar en la instancia vuex dentro de la instancia de vue*/
+que debemos llamar la instancia vuex dentro de la instancia de vue*/
 const store = new Vuex.Store({
     // Lo primero que se hace es crear un estado
     state: {
-        // Este dato numero se vuelve disponible para todos los componentes de vue
-        numero: 100,
+        // El dato numero se vuelve disponible para todos los componentes de vue
+        numero: 0,
         numero1:10,
         materias:[]
     },
@@ -103,6 +90,7 @@ const store = new Vuex.Store({
         incrementar (state) {
         state.numero++
         },
+
         mostrarMaterias(state, materiasAccion){
             state.materias=materiasAccion
         }
@@ -121,8 +109,5 @@ const store = new Vuex.Store({
 
 const app = new Vue({
     el: '#app',
-    store:store,
-    data:{
-
-    }
+    store:store
 })
