@@ -13,7 +13,16 @@ export default createStore({
   mutations: {
     aumentar(state, index){
       state.frutas[index].cantidad++
-    }
+    },
+
+    borrar(state){
+      state.frutas.forEach(elemento => {
+        elemento.cantidad=0
+      })
+    },
+    dis(state, index){
+      state.frutas[index].cantidad--
+    },
   },
 
   actions: {

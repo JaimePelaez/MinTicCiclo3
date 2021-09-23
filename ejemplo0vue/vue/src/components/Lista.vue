@@ -7,10 +7,14 @@
                     <div class="fw-bold">{{fruta.nombre}}</div>
                     <img src="" alt="">
                 </div>
-                <span class="badge bg-primary rounded-pill">{{fruta.cantidad}}</span>
+                <span class="badge bg-primary rounded-pill">
+                    {{fruta.cantidad}} 
+                </span>
             </li>
         </ol>
-
+        <br><br>
+        <button class="btn btn-primary"  @click="borrar(index)" >Aume </button>
+                    
     </div>
 </template>
 
@@ -26,7 +30,8 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['aumentar'])
+        ...mapMutations(['aumentar', 'borrar','dis']),
+        
     }
 }
 
