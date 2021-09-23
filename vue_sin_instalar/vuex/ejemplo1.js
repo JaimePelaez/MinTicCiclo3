@@ -62,7 +62,7 @@ Vue.component('boton',{
                 <button @click="incrementar">+</button>
                 <button @click="obtenerMaterias">Mostrar Materias</button>
                 <ul>
-                    <li v-for="materia of materias">{{materia.nombre}}</li>
+                    <li v-for="materia of materias ">{{materia.nombre}}</li>
                 </ul>
             </div>`,
     computed:{
